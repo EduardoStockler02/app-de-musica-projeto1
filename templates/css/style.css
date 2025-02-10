@@ -18,9 +18,23 @@ body {
     height: 100%;
     max-width: 550px;
     width: 100%;
+    overflow: hidden;
+}
+
+form {
+    padding: 20px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="subimit"]{
+    background-color: #00CED1;
+    margin-top: auto;
 }
 
 .box {
+    margin: 0 auto;
     padding: 15px;    align-items: center;
     justify-content: center;
     display: block;
