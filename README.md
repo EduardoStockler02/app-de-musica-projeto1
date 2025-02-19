@@ -1,1 +1,1 @@
-##TRYNDAmusic
+##Simple app of music
