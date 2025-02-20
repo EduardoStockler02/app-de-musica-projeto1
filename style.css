@@ -112,32 +112,60 @@ header{
 .thumbnail .item .content .title{
     font-weight: 500;
 }
+
 .arrows{
     position: absolute;
     top: 80%;
     right: 60%;
     z-index: 100;
-    width: 500px;
-    max-width: 30%;
+    width: 100%;
+    max-width:  400px;
     display: flex;
     gap: 10px;
     align-items: center;
-    
+    justify-content: center;    
+    background-color: white;
+    padding: 10px;
 }
 .arrows button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: opacity 0.3s ease;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
-    border: none;
-    color: #fff;
-    font-weight: bold;
     transition: .5s;
+    
 }
+.arrows border {
+    border-radius: 50%;
+    border: 1px solid blacks;
+}
+
 .arrows button:hover{
     background-color: #fff;
     color: #000;
 }
+
+.arrows button img {
+    width: 24px;
+    height: 24px;
+}
+
+.arrows button.music {
+    font-size: 24px;
+    color: black;
+}
+
+.arrows button:disabled,
+.content.next .arrows button,
+.content.prev .arrows button {
+    cursor: default;
+    opacity: 0.5;
+}
+
 .carousel .list .item:nth-child(1){
     z-index: 1;
 }
@@ -251,9 +279,11 @@ header{
     animation: showThumbnail .5s linear 1 forwards;
 }
 .content.next .arrows button,
-.content.prev .arrows button{
+.content.prev .arrows button {
     pointer-events: none;
+    opacity: 0.5; /* Optional: Reduce opacity to indicate disabled state */
 }
+
 .carousel.prev .list .item:nth-child(2) .content .author,
 .carousel.prev .list .item:nth-child(2) .content .title,
 .carousel.prev .list .item:nth-child(2) .content .topic,
